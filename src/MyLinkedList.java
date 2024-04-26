@@ -1,4 +1,4 @@
-public class MyLinkedList<T> implements LIst<T> {
+public abstract class MyLinkedList<T> implements MyList<T> {
     private Node<T> head;
     private int size;
 
@@ -40,7 +40,7 @@ public class MyLinkedList<T> implements LIst<T> {
         return size;
     }
 
-    public void remove(int index) {
+    public MyLinkedList(int index) {
         checkIndex(index);
         if(index == 0)
             head = head.next;
@@ -65,4 +65,15 @@ public class MyLinkedList<T> implements LIst<T> {
     }
 
 
+    public int size() {
+    return size;}
+
+    public void add(T element) {
+    }
+
+    public abstract boolean isEmpty();
+
+    public abstract boolean contains(Object element);
+
+    public abstract Iterable<Object> iterator();
 }
