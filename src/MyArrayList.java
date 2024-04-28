@@ -175,8 +175,5 @@ public class MyArrayList<T> implements MyList<T> {
     public String getSize() {
     return null;}
 
-
-    public void isEmpty() {
-    return  ;}
 }
 
