@@ -2,7 +2,6 @@ public class MyMinHeap<T extends Comparable<T>> {
     //MyArrayList
     MyArrayList<T> heap = new MyArrayList<>();
 
-    //My constructor
     public MyMinHeap(){
     }
     // return the size
