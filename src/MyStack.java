@@ -24,11 +24,6 @@ public class MyStack<T> {
         stack.add(item);
     }
 
-    // Returns true if stack is empty
-    public boolean isEmpty(){
-        return stack.isEmpty();
-    }
-
     // Removes all elements from the stack
     public void clear(){
         stack.clear();
