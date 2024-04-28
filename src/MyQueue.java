@@ -5,7 +5,6 @@ public class MyQueue<T extends Comparable<T>> {
     //my constructor
     public MyQueue(){
     }
-
     //first element from queue
     public T front (){
         return queue.getFirst();
