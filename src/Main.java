@@ -129,10 +129,10 @@ public class Main {
         myArrayList.addElement(6);
 
         System.out.println("Value of second element " + myArrayList.getElement(2));
-        myArrayList.addElement(20,3);
+        myArrayList.addElement(1);
         System.out.println("After new adding element of second " + myArrayList.getElement(2));
         System.out.println("Size of myArrayList: " + myArrayList.getSize());
-        myArrayList.removeLast(3);
+        myArrayList.removeLast();
         System.out.println("Size of myArrayList after removing: " + myArrayList.getSize());
         System.out.println("Value of second element  after removing: " + myArrayList.getElement(2));
         myArrayList.clear();
@@ -161,9 +161,8 @@ public class Main {
         System.out.println("Top element: " + stack.top());
         int popped = stack.pop();
         System.out.println("Popped element: " + popped);
-        System.out.println("Empty or not " + stack.isEmpty());
         stack.clear();
-        System.out.println("After clearing " + stack.isEmpty());
+        System.out.println("After clearing+ " );
 
         //MyMinHeap
         MyMinHeap<Integer> minHeap = new MyMinHeap<>();
