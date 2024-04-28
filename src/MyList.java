@@ -1,3 +1,5 @@
+import java.util.Iterator;
+
 public interface MyList<T> extends Iterable<T> {
     void add(T item);
     void set(int index, T item);
@@ -20,4 +22,6 @@ public interface MyList<T> extends Iterable<T> {
 
     void clear();
     int size();
+
+    Iterator<T> iterator();
 }

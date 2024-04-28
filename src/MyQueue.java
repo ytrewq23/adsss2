@@ -1,35 +1,47 @@
 public class MyQueue<T extends Comparable<T>> {
-    MyArrayList<T> queue = new MyArrayList<>();  //MyArrayList
-    public MyQueue(){
-    }                            //my constructor
+    //MyArrayList
+    MyArrayList<T> queue = new MyArrayList<>();
 
+    //my constructor
+    public MyQueue(){
+    }
+
+    //first element from queue
     public T front (){
         return queue.getFirst();
-    }                           //firs element from queue
+    }
 
+    //last element from queue
     public T back(){
         return queue.getLast();
-    }                           //last element from queue
+    }
 
+
+    //removes 1st element and get it
     public T dequeue(){
         T item = queue.getFirst();
         queue.remove(0);
         return item;
-    }                           //removes 1st element and get it
+    }
 
+    //enqueue add element
     public void enqueue(T item){
         queue.add(item);
-    }                          //enqueue add element
+    }
 
+    //checking for empty is queue
     public boolean isEmpty(){
         return queue.size() == 0;
-    }                          //checking for empty is queue
+    }
 
+    //the length of queue
     public int size(){
         return queue.size();
-    }                         //the length of queue
+    }
 
+    //all elements will be deleted
     public void clear(){
         queue.clear();
-    }                        //all elements will be deleted
+    }
+
 }

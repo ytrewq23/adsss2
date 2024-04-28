@@ -1,36 +1,44 @@
 public class MyMinHeap<T extends Comparable<T>> {
-    MyArrayList<T> heap = new MyArrayList<>();   //MyArrayList
+    //MyArrayList
+    MyArrayList<T> heap = new MyArrayList<>();
 
+    //My constructor
     public MyMinHeap(){
     }
-
+    // return the size
     public int size(){
         return heap.size();
     }
 
+
+    // all elements will be deleted from heap
     public void clear(){
         heap.clear();
-    }                          // all elements will be deleted from heap
+    }
 
+    //1st element get
     public T getMin(){
         return heap.getFirst();
-    }                          //1st element get
+    }
 
 
+    // Gets minimum and swaps with last element and removes last element
     public T extractMin(){
         T min = heap.getFirst();
         swap(0, heap.size()-1);
         heap.removeLast();
         heapify(0);
         return min;
-    }                       // Gets minimum and swaps with last element and removes last element
+    }
 
+    // new item will insert at the end of heap
     public void insert(T item){
         heap.add(item);
         int i = heap.size() - 1;
         heapify(i);
-    }                      // new item will insert at the end of heap
+    }
 
+    // heapify function to maintain the heap functions after deletion or insertion
     private void heapify(int i){
         int left = leftChildOf(i);
         int right = rightChildOf(i);
@@ -45,27 +53,35 @@ public class MyMinHeap<T extends Comparable<T>> {
             swap(i, minimum);
             heapify(minimum);
         }
-    }                        // heapify function to maintain the heap functions after deletion or insertion
+    }
 
+    // traverse function to print the heap
     private void traverse(int i){
         if (i < heap.size()){
             System.out.println(heap.get(i));
             traverse(leftChildOf(i));
             traverse(rightChildOf(i));
         }
-    }              // traverse function to print the heap
+    }
+
+    //left child
     public int leftChildOf(int i){
         return 2 * i;
-    }                 //left child
+    }
+    //right child
     public int rightChildOf(int i){
         return 2 * i + 1;
-    }                  //right child
+    }
+    // Returns parent
     public int parentOf(int i){
         return i / 2;
-    }                // Returns parent
+    }
+
+
+    // swapping of two elements
     private void swap(int i, int j) {
-        Comparable<Object> temp = heap.get(i);
+        T temp = heap.get(i);
         heap.set(i, heap.get(j));
         heap.set(j, temp);
-    }               // swapping of two elements
+    }
 }

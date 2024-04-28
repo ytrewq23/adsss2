@@ -1,3 +1,5 @@
+import java.util.Iterator;
+
 public abstract class MyLinkedList<T> implements MyList<T> {
     private Node<T> head;
     private int size;
@@ -75,5 +77,5 @@ public abstract class MyLinkedList<T> implements MyList<T> {
 
     public abstract boolean contains(Object element);
 
-    public abstract Iterable<Object> iterator();
+    public abstract Iterator<T> iterator();
 }

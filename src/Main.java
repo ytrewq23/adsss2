@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
@@ -90,7 +91,7 @@ public class Main {
                 }
 
                 @Override
-                public Iterable<Object> iterator() {
+                public Iterator<Object> iterator() {
                     return null;
                 }
             };
@@ -120,7 +121,6 @@ public class Main {
 
         ArrayList arrayList = new ArrayList();
 
-
         myArrayList.addElement(11.5);
         myArrayList.addElement(10);
         myArrayList.addElement(9);
@@ -132,7 +132,7 @@ public class Main {
         myArrayList.addElement(20,3);
         System.out.println("After new adding element of second " + myArrayList.getElement(2));
         System.out.println("Size of myArrayList: " + myArrayList.getSize());
-        myArrayList.removeElement(3);
+        myArrayList.removeLast(3);
         System.out.println("Size of myArrayList after removing: " + myArrayList.getSize());
         System.out.println("Value of second element  after removing: " + myArrayList.getElement(2));
         myArrayList.clear();
